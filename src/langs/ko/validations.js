@@ -1,3 +1,3 @@
-const validation = {};
+const data = {};
 
-export default validation;
+export default data;

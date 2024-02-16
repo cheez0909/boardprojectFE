@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import loadable from '@loadable/component';
+import MainLayout from './layouts/front/MainLayout';
 
-function App() {
+const MainPage = loadable(() => import('./main/pages/MainPage'));
+const NotFound = loadable(() => import('./commons/pages/NotFound'));
+
+/* 회원 관련 페이지 S */
+const JoinPage = loadable(() => import('./member/pages/JoinPage'));
+const LoginPage = loadable(() => import('./member/pages/LoginPage'));
+/* 회원 관련 페이지 E */
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<MainPage />} />
+
+          {/* 회원 S */}
+          <Route path="member/">
+            <Route path="join" element={<JoinPage />}></Route>
+            <Route path="Login" element={<LoginPage />}></Route>
+          </Route>
+          {/* 회원 E */}
+
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;

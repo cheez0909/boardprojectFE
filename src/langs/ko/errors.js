@@ -1,2 +1,2 @@
-const errors = {};
-export default errors;
+const data = {};
+export default data;

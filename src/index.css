@@ -1,8 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-* { box-sizing: border-box; font-family: 'Nanum Gothic', sans-serif; color: #000; }
-html { font-size: 13px; }
-body { margin: 0; }
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&display=swap');
 
-a { text-decoration: none; }
-ul, ol { list-style: none; margin: 0; padding: 0; }
-dl, dt, dd, li { margin: 0; padding: 0; }
+* {
+    box-sizing: border-box; /* 유연성을 위해서 보더박스로 고정 */
+    font-family: "Nanum Pen Script", sans-serif;
+    outline: none;
+}
+html {
+    ont-size:13px;
+    color: #000;
+}
+body {margin:0;}
+
+
+a{ text-decoration: none;}
+
+ul, ol { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+li, dl, dt, dd { 
+    margin:0; 
+    padding: 0; 
+}
+
+img { border:0; }
+
+h1, h2, h3 { 
+    margin:0; 
+    padding: 0;
+}
+
+.layout-width { 
+    max-width: 1380px;
+    min-width: 1280px;
+    margin: 0 auto; /* 여백 없이 정 가운데 오게 됨 */
+    padding: 0 10px;
+}

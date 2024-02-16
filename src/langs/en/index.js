@@ -2,6 +2,6 @@ import commons from './commons';
 import validations from './validations';
 import errors from './errors';
 
-const msg = { ...commons, ...validations, ...errors };
+const data = { ...commons, ...validations, ...errors };
 
-export default msg;
+export default data;

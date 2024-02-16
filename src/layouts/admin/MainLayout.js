@@ -1,17 +1,16 @@
 import Header from '../../outlines/admin/Header';
 import Footer from '../../outlines/admin/Footer';
 import { Outlet } from 'react-router-dom';
+import React from 'react';
 
-const CommonLayout = () => {
+const MainLayout = () => {
   return (
     <>
       <Header />
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
       <Footer />
     </>
   );
 };
 
-export default CommonLayout;
+export default React.memo(MainLayout);

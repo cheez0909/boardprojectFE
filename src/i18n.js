@@ -13,6 +13,7 @@ const resources = {
 };
 
 i18n.use(initReactI18next).init({
-  resources,
-  lng: 'ko',
+  resources, // 언어파일 자원들 추가
+  // lng: 'ko', // 기본 언어코드 ko로 하면 영어 사이트도 한국어로 나옴, 네비게이터 객체에 언어에 대한 설정정보가 나옴
+  lng: navigator.language,
 });

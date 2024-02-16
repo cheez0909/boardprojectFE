@@ -1,5 +1,19 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const FooterBox = styled.footer`
+  background: #f9f9f9;
+  padding: 50px 0;
+  min-height: 200px;
+  max-height: 450px;
+`;
+
 const Footer = () => {
-    return <h1>푸터</h1>;
-  };
-  
-  export default Footer;
+  return (
+    <FooterBox>
+      <div className="layout-width">푸터...</div>
+    </FooterBox>
+  );
+};
+
+export default React.memo(Footer);
