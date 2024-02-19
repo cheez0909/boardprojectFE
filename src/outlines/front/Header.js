@@ -41,24 +41,23 @@ const HeaderBox = styled.header`
         color: #fff;
         width: 60px;
         height: 60px;
-
-        /* 아이콘 S */
+        
         svg {
           color: #fff;
           font-size: 2.25rem;
         }
-        /* 아이콘 E */
+        
       }
       /* 버튼 내부 E */
 
-      /* input 태그 타입 text S */
+      
       input[type='text'] {
         flex-grow: 1;
         height: 60px;
         border: 2px solid ${dark};
         padding: 0 15px;
       }
-      /* input 태그 타입 text E */
+      
     }
     /* form 내부 E */
 
@@ -66,26 +65,21 @@ const HeaderBox = styled.header`
     .links {
       text-align: right;
 
-      /* link클래스 내부 a태그 S */
+      
       a {
         margin-left: 15px;
       }
-      /* link클래스 내부 a태그 E */
-
-      /* link클래스 내부 icon클래스 S */
+      
       .icon {
         font-size: 2.25rem;
         color: ${secondary};
       }
-      /* link클래스 내부 icon클래스 E */
-
-      /* link클래스 내부 on클래스 S */
+      
       .on {
         .icon {
           color: ${primary};
         }
       }
-      /* link클래스 내부 on클래스 E */
     }
     /* links 클래스 내부 S */
   }

@@ -6,13 +6,17 @@
     outline: none;
 }
 html {
-    ont-size:13px;
+    font-size:13px;
     color: #000;
 }
-body {margin:0;}
+body {
+    margin:0;
+}
 
-
-a{ text-decoration: none;}
+a{ 
+    text-decoration: none;
+    color: #000;
+}
 
 ul, ol { 
     list-style: none; 

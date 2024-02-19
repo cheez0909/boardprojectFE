@@ -5,7 +5,6 @@ const FooterBox = styled.footer`
   background: #f9f9f9;
   padding: 50px 0;
   min-height: 200px;
-  max-height: 450px;
 `;
 
 const Footer = () => {

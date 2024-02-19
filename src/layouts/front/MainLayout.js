@@ -11,11 +11,11 @@ const ContentBox = styled.main`
 const MainLayout = () => {
   return (
     <>
-      <Header></Header>
+      <Header />
       <ContentBox>
         <Outlet />
       </ContentBox>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };
