@@ -38,3 +38,9 @@ h1, h2, h3 {
     margin: 0 auto; /* 여백 없이 정 가운데 오게 됨 */
     padding: 0 10px;
 }
+
+/* 여백 공통 */
+.mt20 {
+    margin-top: 20px !important; /* 강제적용 */
+
+}
