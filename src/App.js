@@ -10,6 +10,14 @@ const JoinPage = loadable(() => import('./member/pages/JoinPage'));
 const LoginPage = loadable(() => import('./member/pages/LoginPage'));
 /* 회원 관련 페이지 E */
 
+/* 마이페이지 S */
+const MyMainPage = loadable(() => import('./mypage/pages/MainPage'));
+/* 마이페이지 E */
+
+/* 마이페이지 S */
+const AdminMainPage = loadable(() => import('./admin/pages/MainPage'));
+/* 마이페이지 E */
+
 const App = () => {
   return (
     <>
@@ -24,6 +32,17 @@ const App = () => {
           </Route>
           {/* 회원 E */}
 
+          {/* 마이페이지 S */}
+          <Route path="mypage/">
+            <Route index element={<MyMainPage />} />
+          </Route>
+          {/* 마이페이지 E */}
+
+          {/* 관리자페이지 S */}
+          <Route path="admin/">
+            <Route index element={<AdminMainPage />} />
+          </Route>
+          {/* 관리자페이지 E */}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
