@@ -11,7 +11,6 @@ const ContentBox = styled.main`
 const MainLayout = () => {
   return (
     <>
-      <Header />
       <ContentBox>
         <Outlet />
       </ContentBox>
