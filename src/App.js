@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import loadable from '@loadable/component';
 import MainLayout from './layouts/front/MainLayout';
+import DetailsLayout from './layouts/front/DetailsLayout';
 
 const MainPage = loadable(() => import('./main/pages/MainPage'));
 const NotFound = loadable(() => import('./commons/pages/NotFound'));
@@ -17,6 +18,7 @@ const MyMainPage = loadable(() => import('./mypage/pages/MainPage'));
 /* 마이페이지 S */
 const AdminMainPage = loadable(() => import('./admin/pages/MainPage'));
 /* 마이페이지 E */
+const DetailsPage = loadable(() => import('./details/pages/DetailsPage'));
 
 const App = () => {
   return (
@@ -24,6 +26,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<MainPage />} />
+
+          {/* 검색화면 S */}
+          <Route path="search/" element={<DetailsLayout />}>
+            <Route index element={<DetailsPage />}></Route>
+          </Route>
+          {/* 검색화면 E */}
 
           {/* 회원 S */}
           <Route path="member/">

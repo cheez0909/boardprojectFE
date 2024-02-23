@@ -13,10 +13,12 @@
     font-family: 'KCC-Ganpan', sans-serif;
     outline: none;
 }
+
 html {
     font-size:13px;
     color: #000;
 }
+
 body {
     margin:0;
 }
@@ -72,5 +74,7 @@ h1, h2, h3 {
     position: relative;
 }
 
-
+.searchInput{
+    border-style: none;
+}
 

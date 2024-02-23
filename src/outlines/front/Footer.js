@@ -4,7 +4,9 @@ import styled from 'styled-components';
 const FooterBox = styled.footer`
   background: #f9f9f9;
   min-height: 70px;
-  margin-botton: 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `;
 
 const FooterDiv = styled.div`

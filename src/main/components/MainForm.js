@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../../images/Mainlogo.png';
+import logo from '../../images/Mainlogo.svg';
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FaUserPlus } from 'react-icons/fa';
@@ -17,33 +17,58 @@ const { medium } = fontSize;
 const MainBox = styled.div`
   position: relative;
   top: 20%;
-  width: 573px;
+  width: 764px;
   height: 10%;
   margin: 0px auto;
 `;
 
 const SearchBox = styled.div`
   position: relative;
-  top: 25%;
-  border: 0.25rem solid #500e10;
-  border-radius: 24px;
-  margin: 0 auto;
   justify-content: space-between;
+  display: flex;
+  top: 25%;
+  margin: 0 auto;
+  position: relative;
+  top: 25%;
   align-items: center;
-  width: 573px;
+  width: 764px;
   height: 40px;
   text-align: center;
-  display: flex;
+
+  .miniLogo {
+    text-align: center;
+  }
+
+  .searchInput {
+    padding: 10px;
+    border: 3px solid gray;
+    border-radius: 24px;
+    box-shadow: none;
+    outline: none;
+    width: 600px;
+    font-size: 16px;
+  }
+
+  .searchBtn {
+    padding: 10px 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    margin: 0px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    font-size: 16px;
+  }
 `;
 
 const MemberhBox = styled.div`
   display: flex;
   margin: 0 auto;
-  width: 573px;
+  width: 764px;
   padding: 10px 0;
   border-left: 0;
   border-right: 0;
   font-size: 1.5rem;
+  position: relative;
 
   a {
     width: 0;
@@ -67,18 +92,18 @@ const Main = () => {
         <img src={logo} alt="logo" />
       </MainBox>
       <SearchBox>
-        <div classname="inputWrapper">
-          <div classname="miniLogo">logo</div>
-          <div classname="searchText">
-            <input type="text" name="skey" placeholder={t('검색어_입력')} />
-          </div>
-          <div className="searchBtn">
-            <button type="submit">
-              <FiSearch />
-            </button>
-          </div>
-        </div>
+        <div>logo</div>
+        <input
+          type="text"
+          name="skey"
+          placeholder={t('검색어_입력')}
+          className="searchInput"
+        />
+        <button type="submit" className="searchBtn">
+          <FiSearch />
+        </button>
       </SearchBox>
+
       <MemberhBox>
         <Link to="/member/login">
           <FiUserPlus />
